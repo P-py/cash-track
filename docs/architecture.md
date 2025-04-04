@@ -7,6 +7,8 @@ This document aims to outline the architecture of the **Cashtrack** application,
 
 ## 🏗️ Architectural Overview
 
+![architecture overview](architecture.png)
+
 ### **1. System Components**
 
 #### 🔹 **Frontend**
