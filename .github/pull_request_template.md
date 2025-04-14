@@ -1,4 +1,4 @@
-## Porque esse PR foi criado? 🤔
+## Por que esse PR foi criado? 🤔
 [Descrição do problema que está sendo resolvido]
 
 ## O que foi feito? 🧰
