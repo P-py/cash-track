@@ -8,3 +8,18 @@
     --dark-secondary-highlight: #8E6E53;
     --dark-terciary-highlight: #7A7265;
 }
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-secondary-highlight);
+    border-radius: 10px;
+}
