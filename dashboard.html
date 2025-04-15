@@ -56,6 +56,40 @@
             </form>
         </div>
     </div>
+    <!-- Modal for adding new entry/expense -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <form id="addFormIncome">
+                <label for="incomeLabel">Nome:</label>
+                <input type="text" id="incomeLabel" required>
+                <label for="value">Valor (R$):</label>
+                <input type="number" id="value-income" name="value" required>
+                <label>Tipo:</label>
+                <select id="type-select-incomes" name="type" required class="type-select-incomes">
+                    <option value="SALARY">Salário</option>
+                    <option value="EXTRA">Extras</option>
+                    <option value="GIFT">Presente</option>
+                </select>
+                <button type="submit">Adicionar</button>
+            </form>
+            <form id="addFormExpense">
+                <label for="expenseLabel">Nome:</label>
+                <input type="text" id="expenseLabel" required>
+                <label for="value">Valor (R$):</label>
+                <input type="number" id="value-expense" name="value" required>
+                <label>Tipo:</label>
+                <select id="type-select-expenses" name="type" required class="type-select-expenses">
+                    <option value="MONTHLY_ESSENTIAL">Gastos mensais</option>
+                    <option value="ENTERTAINMENT">Entretenimento</option>
+                    <option value="INVESTMENTS">Investimentos</option>
+                    <option value="LONGTIME_PURCHASE">Longo prazo</option>
+                </select>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
     <!-- Navbar -->
     <header data-aos="fade-down">
         <div class="container">
@@ -81,11 +115,31 @@
     </header>
     <!-- Main Content -->
     <main>
-        <h1>[Dashboard] </h1>
+        <div class="cards-container" data-aos="fade-up"></div>
+            <div class="user-card" data-aos="fade-up">
+                <h3>Olá <span id="username"></span> seu saldo está em <span id="balance"></span></h3>
+            </div>
+            <div class="card green-card" data-aos="fade-up">
+                <h3>Entradas</h3>
+                <p>Total de Entradas: <span id="total-incomes"></span></p>
+                <button id="add-income-btn">Adicionar Nova Entrada</button>
+                <button id="view-all-incomes-btn">Ver Todas as Entradas</button>
+                <h4>Últimas entradas</h4>
+                <ul id="last-incomes"></ul>
+            </div>
+            <div class="card red-card" data-aos="fade-up">
+                <h3>Despesas</h3>
+                <p>Total de Despesas: <span id="total-expenses"></span></p>
+                <button id="add-expense-btn">Adicionar Nova Despesa</button>
+                <button id="view-all-expenses-btn">Ver Todas as Despesas</button>
+                <h4>Últimas despesas</h4>
+                <ul id="last-expenses"></ul>
+            </div>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
-        <p><a style="color: #C0B7B1;" href="./ye.html">&copy; 2024 Cashtrack. Todos os direitos reservados.</a></p>
+        <p><a style="color: #C0B7B1;">&copy; 2025 Cashtrack. Todos os direitos reservados.</a></p>
     </footer>
 </body>
 </html>
@@ -96,3 +150,6 @@
 <script>
     AOS.init();
 </script>
+<script src="./js/dashboard.js"></script>
+<script src="./js/add-new.js"></script>
+<script src="./js/edit-object.js"></script>
