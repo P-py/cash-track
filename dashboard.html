@@ -6,6 +6,7 @@
     <title>Cashtrack</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="./assets/images/logo.png" type="image/png">
+
     <!-- AOS Library ~ used for scroll and fade animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Font Awesome ~ used for automatic icons on the code-->
@@ -14,6 +15,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
+    <!-- Modal for the register message -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <!-- Modal for editing objects -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="editModalTitle"></h3>
+            <form id="editIncomeForm">
+                <label for="editIncomeLabel">Nome:</label>
+                <input type="text" id="editIncomeLabel" required>
+                <label for="editIncomeValue">Valor (R$):</label>
+                <input type="number" id="editIncomeValue" name="value" required>
+                <label>Tipo:</label>
+                <select id="editIncomeType" name="type" required class="type-select-incomes">
+                    <option value="SALARY">Salário</option>
+                    <option value="EXTRA">Extras</option>
+                    <option value="GIFT">Presente</option>
+                </select>
+                <button type="submit">Editar</button>
+            </form>
+            <form id="editExpenseForm">
+                <label for="editExpenseLabel">Nome:</label>
+                <input type="text" id="editExpenseLabel" required>
+                <label for="value">Valor (R$):</label>
+                <input type="number" id="editExpenseValue" name="value" required>
+                <label>Tipo:</label>
+                <select id="editExpenseType" name="type" required class="type-select-expenses">
+                    <option value="MONTHLY_ESSENTIAL">Gastos mensais</option>
+                    <option value="ENTERTAINMENT">Entretenimento</option>
+                    <option value="INVESTMENTS">Investimentos</option>
+                    <option value="LONGTIME_PURCHASE">Longo prazo</option>
+                </select>
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
     <!-- Navbar -->
     <header data-aos="fade-down">
         <div class="container">
