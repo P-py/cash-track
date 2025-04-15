@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cashtrack</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <title>Sobre nós - Cashtrack</title>
+    <link rel="stylesheet" href="./css/about.css">
     <link rel="icon" href="./assets/images/logo.png" type="image/png">
+
+    <!-- AOS Library ~ used for scroll and fade animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome ~ used for automatic icons on the code-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <!-- Swiper JS ~ used for carousel sliding animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
+    <!-- This modal is hidden by default, and it's used to display the images on full screen when clicked -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" alt="Imagem ampliada" id="modalImage">
+        </div>
+    </div>
     <!-- Navbar -->
     <header data-aos="fade-down">
         <div class="container">
@@ -32,11 +46,176 @@
     </header>
     <!-- Main Content -->
     <main>
-        <h1>[about] </h1>
+        <br>
+        <section class="what-we-do" data-aos="fade-up">
+            <h2>O que fazemos?</h2>
+            <div class="what-we-do-desktop">
+                <div class="text-content" data-aos="fade-up">
+                    <p>
+                        No Cashtrack, nossa missão é capacitar pessoas e empresas a tomarem decisões financeiras mais inteligentes e conscientes. Desenvolvemos um aplicativo acessível e eficiente para que qualquer usuário, independentemente de sua experiência com finanças ou tecnologia, possa organizar e acompanhar suas receitas e despesas de maneira clara e prática.
+                    </p>
+                    <p>
+                        Além disso, o Cashtrack é um projeto OpenSource - <a href="https://github.com/P-py/cashtrack">saiba mais sobre o projeto aqui!</a> - o que significa que nossa plataforma é aberta, colaborativa e em constante evolução. Ao disponibilizar nosso código de forma pública, promovemos a inovação e garantimos que qualquer pessoa ou desenvolvedor possa contribuir para o aprimoramento do sistema. Isso reflete nosso compromisso com a acessibilidade e transparência, oferecendo uma ferramenta poderosa sem custos exorbitantes.
+                    </p>
+                    <p>
+                        Seja para indivíduos que desejam manter suas finanças em dia ou para pequenas empresas que precisam de uma solução confiável, o Cashtrack oferece a flexibilidade, a segurança e o controle necessários para administrar suas finanças com confiança.
+                    </p>
+                    <p>
+                        <b>Clique nas imagens para uma melhor visualização!</b>
+                    </p>
+                </div>
+                <div class="image-content" data-aos="fade-up">
+                    <img src="./assets/images/data-diagram.png" alt="Diagrama de dados" class="expandableImage">
+                    <img src="./assets/images/database_structure.png" alt="Estrutura do banco de dados" class="expandableImage">
+                    <img src="./assets/images/swagger_demo.png" alt="Swagger" class="expandableImage">
+                </div>
+            </div>
+            <div class="text-content" data-aos="fade-up">
+                <p>
+                    No Cashtrack, nossa missão é capacitar pessoas e empresas a tomarem decisões financeiras mais inteligentes e conscientes. Desenvolvemos um aplicativo acessível e eficiente para que qualquer usuário, independentemente de sua experiência com finanças ou tecnologia, possa organizar e acompanhar suas receitas e despesas de maneira clara e prática.
+                </p>
+                <p>
+                    Além disso, o Cashtrack é um projeto OpenSource - <a href="https://github.com/P-py/cashtrack">saiba mais sobre o projeto aqui!</a> - o que significa que nossa plataforma é aberta, colaborativa e em constante evolução. Ao disponibilizar nosso código de forma pública, promovemos a inovação e garantimos que qualquer pessoa ou desenvolvedor possa contribuir para o aprimoramento do sistema. Isso reflete nosso compromisso com a acessibilidade e transparência, oferecendo uma ferramenta poderosa sem custos exorbitantes.
+                </p>
+                <p>
+                    Seja para indivíduos que desejam manter suas finanças em dia ou para pequenas empresas que precisam de uma solução confiável, o Cashtrack oferece a flexibilidade, a segurança e o controle necessários para administrar suas finanças com confiança.
+                </p>
+                <p>
+                    <b>Clique nas imagens para uma melhor visualização!</b>
+                </p>
+            </div>
+            <div class="what-we-do-mobile">
+                <div class="swiper-container">
+                    <div class="what-we-do-images">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets/images/data-diagram.png" alt="Diagrama de dados" class="expandableImage">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/database_structure.png" alt="Estrutura do banco de dados" class="expandableImage">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/swagger_demo.png" alt="Swagger" class="expandableImage">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="who-we-are" data-aos="fade-up">
+            <h2>Quem somos?</h2>
+            <div class="who-we-are-container">
+                <div class="who-we-are-box">
+                    <img class="profile-picture" src="./assets/images/pedro.jpg" alt="Foto">
+                    <h3><i class="fas fa-user"></i></i> Pedro Salviano Santos</h3>
+                    <ul>
+                        <li>Estudante de <b>Engenharia de Computação</b> no terceiro semestre.</li>
+                        <hr>
+                        <li>Engenheiro de Software Júnior, especializado em Kotlin e APIs REST</li>
+                        <hr>
+                        <li><a href="mailto:236586@facens.br"><i class="fas fa-envelope"></i> 236586@facens.br</a></li>
+                    </ul>
+                </div>
+                <div class="who-we-are-box">
+                    <img class="profile-picture" src="./assets/images/luiz.png" alt="Foto">
+                    <h3><i class="fas fa-user"></i></i> Luiz Gustavo Motta Viana</h3>
+                    <ul>
+                        <li>Estudante de <b>Engenharia de Computação</b> no terceiro semestre.</li>
+                        <hr>
+                        <li><a href="mailto:236428@facens.br"><i class="fas fa-envelope"></i> 236428@facens.br</a></li>
+                    </ul>
+                </div>
+                <div class="who-we-are-box">
+                    <img class="profile-picture" src="./assets/images/ronaldo.png" alt="Foto">
+                    <h3><i class="fas fa-user"></i></i> Ronaldo Simeone Antonio</h3>
+                    <ul>
+                        <li>Estudante de <b>Engenharia de Computação</b>.</li>
+                        <hr>
+                        <li>Especialista em Game Development</li>
+                        <hr>
+                        <li><a href="mailto:190232@facens.br"><i class="fas fa-envelope"></i> 190232@facens.br</a></li>
+                    </ul>
+                </div>
+                <div class="who-we-are-box">
+                    <img class="profile-picture" src="./assets/images/erick.png" alt="Foto">
+                    <h3><i class="fas fa-user"></i></i> Erick Ferreira Ribeiro</h3>
+                    <ul>
+                        <li>Estudante de <b>Engenharia de Computação</b>.</li>
+                        <hr>
+                        <li><a href="mailto:237046@facens.br"><i class="fas fa-envelope"></i> 237046@facens.br</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="swiper-container who-we-are-container-mobile">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="who-we-are-box">
+                            <img class="profile-picture" src="./assets/images/pedro.jpg" alt="Foto">
+                            <h3><i class="fas fa-user"></i> Pedro Salviano Santos</h3>
+                            <ul>
+                                <li>Estudante de <b>Engenharia de Computação</b> no terceiro semestre.</li>
+                                <hr>
+                                <li>Engenheiro de Software Júnior, especializado em Kotlin e APIs REST</li>
+                                <hr>
+                                <li><a href="mailto:236586@facens.br"><i class="fas fa-envelope"></i> 236586@facens.br</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="who-we-are-box">
+                            <img class="profile-picture" src="./assets/images/luiz.png" alt="Foto">
+                            <h3><i class="fas fa-user"></i> Luiz Gustavo Motta Viana</h3>
+                            <ul>
+                                <li>Estudante de <b>Engenharia de Computação</b> no terceiro semestre.</li>
+                                <hr>
+                                <li><a href="mailto:236428@facens.br"><i class="fas fa-envelope"></i> 236428@facens.br</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="who-we-are-box">
+                            <img class="profile-picture" src="./assets/images/ronaldo.png" alt="Foto">
+                            <h3><i class="fas fa-user"></i> Ronaldo Simeone Antonio</h3>
+                            <ul>
+                                <li>Estudante de <b>Engenharia de Computação</b>.</li>
+                                <hr>
+                                <li>Especialista em Game Development</li>
+                                <hr>
+                                <li><a href="mailto:190232@facens.br"><i class="fas fa-envelope"></i> 190232@facens.br</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="who-we-are-box">
+                            <img class="profile-picture" src="./assets/images/erick.png" alt="Foto">
+                            <h3><i class="fas fa-user"></i> Erick Ferreira Ribeiro</h3>
+                            <ul>
+                                <li>Estudante de <b>Engenharia de Computação</b>.</li>
+                                <hr>
+                                <li><a href="mailto:237046@facens.br"><i class="fas fa-envelope"></i> 237046@facens.br</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
     <footer>
-        <p><a style="color: #C0B7B1;" href="./ye.html">&copy; 2024 Cashtrack. Todos os direitos reservados.</a></p>
+        <p>&copy; 2024 Cashtrack. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="./js/about.js"></script>    
