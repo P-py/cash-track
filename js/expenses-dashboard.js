@@ -30,14 +30,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (parts.length === 2) return parts.pop().split(';').shift();
     }
 
-    const accessToken = getCookie('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
     if (!accessToken) {
         window.location.href = 'index.html';
         return;
     }
 
-    function deleteCookie(name) {
-        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    function deleteAccessToken() {
+        sessionStorage.removeItem('accessToken');
+        window.location.href = 'index.html';  // Redirecionar para a página de login
     }
 
     function showMessage(message) {
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     document.getElementById('logout-btn').addEventListener('click', () => {
-        deleteCookie('accessToken');
+        deleteAccessToken();
         window.location.href = 'index.html';
     });
 

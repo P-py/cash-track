@@ -9,13 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const messageModal = document.getElementById('messageModal');
     const closeModal = modal.querySelector('.close');
 
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-
-    const accessToken = getCookie('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
 
     //Function to show the add new expense/income modal
     function showModal(title, type) {
