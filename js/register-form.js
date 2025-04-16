@@ -1,4 +1,4 @@
-const API_URL = 'https://cashtrack-deploy-production.up.railway.app';
+const API_URL = 'https://cash-track-api-production.up.railway.app';
 //const API_URL = 'http://localhost:8080';
 
 document.getElementById('registerSubmit').addEventListener('click', async function(event) {
