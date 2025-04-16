@@ -3,13 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const submitButtons = document.querySelectorAll('.submit-btn');
 
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-
-    const accessToken = getCookie('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
     if (accessToken) {
         window.location.href = 'dashboard.html';
     }

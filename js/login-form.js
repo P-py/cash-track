@@ -1,5 +1,5 @@
-const API_URL = 'https://cash-track-api-production.up.railway.app';
-//const API_URL = 'http://localhost:8080';
+//const API_URL = 'https://cash-track-api-production.up.railway.app';
+const API_URL = 'http://localhost:8080';
 
 document.getElementById('loginSubmit').addEventListener('click', async function(event) {
     event.preventDefault(); // Prevents the default form submission on the browser
@@ -60,16 +60,15 @@ document.getElementById('loginSubmit').addEventListener('click', async function(
     
             const elapsedTime = Date.now() - startTime;
             const remainingTime = minimumLoadingTime - elapsedTime;
-
-            const responseBody = await response.json();
     
             setTimeout(() => {
                 submitButton.classList.remove('loading');
     
                 switch (response.status) {
-                    case 200:
+                    case 204:
                         // Set the access token as a cookie
-                        document.cookie = `accessToken=${responseBody.accessToken}; path=/; max-age=3600; Secure; SameSite=None;`;
+                        const token = response.headers.get("Authorization");
+                        sessionStorage.setItem("accessToken", token);
 
                         modalMessage.textContent = 'Login realizado com sucesso!';
                         modal.style.display = 'block';

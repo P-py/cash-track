@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (parts.length === 2) return parts.pop().split(';').shift();
     }
 
-    const accessToken = getCookie('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
     if(accessToken) {
         loginBtn.textContent = 'Seu Dashboard';
     }
