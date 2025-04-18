@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashtrack - Conta</title>
+    <link rel="stylesheet" href="./css/account.css">
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+
+    <!-- AOS Library - used for scroll and fade animations-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font awrsome - used for icons on the code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Modal for the register message -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <!-- Modal for editing username -->
+    <div id="editUsernameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="editModalTitle"></h3>
+            <form id="editUsernameForm">
+                <label for="newUsername">Novo nome de usuário:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal for editing email -->
+    <div id="editEmailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="editModalTitle"></h3>
+            <form id="editEmailForm">
+                <label for="newEmail">Novo email:</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <header data-aos="fade-down">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="Cashtrack logo">
+                <p>Cashtrack</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="index.html" id="logout-btn">Logout</a></li>
+                </ul>
+                <!-- Pseudoelement used for the burger icon on the mobile version -->
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <div class="login-card" data-aos="fade-up">
+            <i class="fas fa-user-circle user-icon"></i>
+            <h3>Sua conta</h3>
+            <br>
+            <div>
+                <div>
+                    <button class="edit-btn-desktop" id="edit-btn" data-id="username">
+                        <i class="fas fa-pencil-alt" data-id="username"></i>
+                    </button>
+                    <button class="edit-btn" id="edit-btn" data-id="username">
+                        <i class="fas fa-pencil-alt" data-id="username"></i>
+                    </button>
+                    <p id="userName">Nome</p>
+                    <p id="userNameValue"></p>
+                </div>
+                <hr>
+                <div>
+                    <button class="edit-btn-desktop" id="edit-btn" data-id="email">
+                        <i class="fas fa-pencil-alt" data-id="email"></i>
+                    </button>
+                    <button class="edit-btn" id="edit-btn" data-id="email">
+                        <i class="fas fa-pencil-alt" data-id="email"></i>
+                    </button>
+                    <p id="userEmail">Email</p>
+                    <p id="userEmailValue"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cashtrack. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="./js/account-dashboard.js"></script>
