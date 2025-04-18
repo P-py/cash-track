@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             closeBtn.onclick = () => modal.style.display = 'none';
     
             // Fechar ao clicar fora do conteúdo
-            window.onclick = (event) => {
+            window.addEventListener('click', (event) => {
                 if (event.target === modal) {
                     modal.style.display = 'none';
                 }
-            };
+            });
         });
     });
 
