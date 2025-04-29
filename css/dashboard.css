@@ -203,6 +203,12 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.active-page {
+    color: var(--dark-font-color);
+    background-color: var(--dark-main-bg-color);
+    border-radius: 5px;
+}
+
 .burger {
     display: none;
     cursor: pointer;
