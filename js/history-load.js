@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const messageModal = document.getElementById('messageModal');
     const modalMessage = document.getElementById('modalMessage');
 
-    console.log("aqui");
-
     function showMessage(message) {
         modalMessage.textContent = message;
         messageModal.style.display = 'flex';
