@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+    --dark-main-bg-color: #2A2728;
+    --dark-secondary-bg-color: #201D1E;
+    --dark-font-color: #C0B7B1;
+    --dark-secondary-font-color: #948e8a;
+    --dark-primary-highlight: #C69C72;
+    --dark-secondary-highlight: #8E6E53;
+    --dark-terciary-highlight: #7A7265;
+    --expenses-color: #964646;
+    --incomes-color: #4B8A08;
+}
+
+* {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.history-container {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--dark-secondary-bg-color);
+    border-radius: 12px;
+    border: 1px solid var(--dark-secondary-highlight);
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--dark-terciary-highlight);
+    text-align: center;
+    color: #fff;
+    gap: 20px;
+}
+
+.history-item .label, .history-item .value, .history-item .date {
+    flex: 1;
+}
+
+.history-item.income .value {
+    color: var(--incomes-color); /* Verde para incomes */
+}
+
+.history-item.expense .value {
+    color: var(--expenses-color); /* Vermelho para expenses */
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .history-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .history-header {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .history-item .label, 
+    .history-item .value, 
+    .history-item .date {
+        flex: none;
+        width: 100%;
+    }
+
+    .history-item .value, 
+    .history-item .date {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-container {
+        padding: 15px;
+    }
+
+    .history-header {
+        font-size: 13px;
+    }
+
+    .history-item {
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .history-item .value, 
+    .history-item .date {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
