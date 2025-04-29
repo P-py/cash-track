@@ -29,9 +29,9 @@
             <h3 id="editModalTitle"></h3>
             <form id="editIncomeForm">
                 <label for="editIncomeLabel">Nome:</label>
-                <input type="text" id="editIncomeLabel" required>
+                <input type="text" id="editIncomeLabel" autocomplete="off" required>
                 <label for="editIncomeValue">Valor (R$):</label>
-                <input type="number" id="editIncomeValue" name="value" required>
+                <input type="number" id="editIncomeValue" name="value" autocomplete="off" required>
                 <label>Tipo:</label>
                 <select id="editIncomeType" name="type" required class="type-select-incomes">
                     <option value="SALARY">Salário</option>
@@ -42,9 +42,9 @@
             </form>
             <form id="editExpenseForm">
                 <label for="editExpenseLabel">Nome:</label>
-                <input type="text" id="editExpenseLabel" required>
+                <input type="text" id="editExpenseLabel" autocomplete="off" required>
                 <label for="value">Valor (R$):</label>
-                <input type="number" id="editExpenseValue" name="value" required>
+                <input type="number" id="editExpenseValue" name="value" autocomplete="off" required>
                 <label>Tipo:</label>
                 <select id="editExpenseType" name="type" required class="type-select-expenses">
                     <option value="MONTHLY_ESSENTIAL">Gastos mensais</option>
@@ -63,9 +63,9 @@
             <h3 id="modalTitle"></h3>
             <form id="addFormIncome">
                 <label for="incomeLabel">Nome:</label>
-                <input type="text" id="incomeLabel" required>
+                <input type="text" id="incomeLabel" autocomplete="off" required>
                 <label for="value">Valor (R$):</label>
-                <input type="number" id="value-income" name="value" required>
+                <input type="number" id="value-income" name="value" autocomplete="off" required>
                 <label>Tipo:</label>
                 <select id="type-select-incomes" name="type" required class="type-select-incomes">
                     <option value="SALARY">Salário</option>
@@ -76,9 +76,9 @@
             </form>
             <form id="addFormExpense">
                 <label for="expenseLabel">Nome:</label>
-                <input type="text" id="expenseLabel" required>
+                <input type="text" id="expenseLabel" autocomplete="off" required>
                 <label for="value">Valor (R$):</label>
-                <input type="number" id="value-expense" name="value" required>
+                <input type="number" id="value-expense" name="value" autocomplete="off" required>
                 <label>Tipo:</label>
                 <select id="type-select-expenses" name="type" required class="type-select-expenses">
                     <option value="MONTHLY_ESSENTIAL">Gastos mensais</option>
@@ -142,9 +142,6 @@
     <footer>
         <p><a style="color: #C0B7B1;">&copy; 2025 Cashtrack. Todos os direitos reservados.</a></p>
     </footer>
-</body>
-</html>
-
 <!-- Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -154,3 +151,5 @@
 <script src="./js/dashboard.js"></script>
 <script src="./js/add-new.js"></script>
 <script src="./js/edit-object.js"></script>
+</body>
+</html>
