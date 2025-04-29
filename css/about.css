@@ -113,6 +113,12 @@ nav {
     font-weight: 500;
 }
 
+.active-page {
+    color: var(--dark-font-color);
+    background-color: var(--dark-main-bg-color);
+    border-radius: 5px;
+}
+
 a {
     color: var(--dark-primary-highlight);
     text-decoration: none;

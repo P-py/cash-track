@@ -9,6 +9,12 @@
     --dark-terciary-highlight: #7A7265;
 }
 
+.active-page {
+    color: var(--dark-font-color);
+    background-color: var(--dark-main-bg-color);
+    border-radius: 5px;
+}
+
 /* Modal container */
 .modal {
     display: none; /* Inicialmente escondido */
