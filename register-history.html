@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashtrack</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/register-history.css">
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+
+    <!-- AOS Library ~ used for scroll and fade animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome ~ used for automatic icons on the code-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Swiper JS ~ used for carousel sliding animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Modal for the register message -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header data-aos="fade-down">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" alt="Cashtrack logo">
+                <p>Cashtrack</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="incomes-dashboard.html">Entradas</a></li>
+                    <li><a href="expenses-dashboard.html">Despesas</a></li>
+                    <li><a href="account-dashboard.html">Conta</a></li>
+                    <li><a href="login.html" id="logout-btn">Logout</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="cards-container" data-aos="fade-up">
+            <div class="user-card" data-aos="fade-up">
+                <h3>Olá <span id="username"></span> seu saldo está em <span id="balance"></span></h3>
+            </div>
+        </div>
+
+        <!-- Histórico do usuário -->
+        <section id="history-section" class="history-container" data-aos="fade-up">
+            <h2>Registros</h2>
+            <ul id="history-list" class="history-list">
+                <!-- Itens do histórico aparecem aqui -->
+            </ul>
+        </section>               
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><a style="color: #C0B7B1;">&copy; 2025 Cashtrack. Todos os direitos reservados.</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/history-load.js"></script>
+</body>
+</html>
