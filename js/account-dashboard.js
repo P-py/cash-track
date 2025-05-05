@@ -13,8 +13,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         sessionStorage.removeItem('accessToken');
     }
 
+    function isValidJwtFormat(token) {
+        const jwtRegex = /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/;
+        return jwtRegex.test(token);
+    }
+
     const accessToken = sessionStorage.getItem('accessToken');
-    if (!accessToken) {
+    if (!accessToken || !isValidJwtFormat(accessToken)) {
+        // Token ausente ou com formato inválido
+        deleteAccessToken()
         window.location.href = 'index.html';
         return;
     }
