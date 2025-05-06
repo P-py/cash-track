@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.close');
     const loginBtn = document.getElementById('login-btn');
 
+    function isValidJwtFormat(token) {
+        const jwtRegex = /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/;
+        return jwtRegex.test(token);
+    }
+
     const accessToken = sessionStorage.getItem('accessToken');
-    if(accessToken) {
+    if(accessToken && isValidJwtFormat(accessToken)) {
         loginBtn.textContent = 'Seu Dashboard';
     }
 

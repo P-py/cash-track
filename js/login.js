@@ -3,8 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const submitButtons = document.querySelectorAll('.submit-btn');
 
+    function isValidJwtFormat(token) {
+        const jwtRegex = /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/;
+        return jwtRegex.test(token);
+    }
+
     const accessToken = sessionStorage.getItem('accessToken');
-    if (accessToken) {
+    if(accessToken && isValidJwtFormat(accessToken)) {
         window.location.href = 'dashboard.html';
     }
 
